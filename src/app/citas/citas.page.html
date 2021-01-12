@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>CITAS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let cita of citas">
+    <ion-item (click)="gotTocharacter(cita.id)">
+      <ion-avatar slot="start">
+        <img [src]="cita.image">
+      </ion-avatar>
+      <ion-label>
+        <h3>Citas Id :{{cita.id}}</h3>
+        <h2>Cita :{{cita.quote}}</h2>
+        <h3>By :{{cita.by}}</h3>
+
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

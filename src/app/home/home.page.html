@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Final Space</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list *ngFor="let character of characters">
+    <ion-item  (click)="gotTocharacter(character.id)">
+   
+      <ion-avatar slot="start">
+        <img [src]="character.img_url" >
+      </ion-avatar>
+      <ion-label>
+        <h2>Personaje Id :{{character.id}}</h2>
+        <h3>Nombre :{{character.name}}</h3>
+        <h3>Estatus :{{character.status}}</h3>
+        <h3>Especie :{{character.species}}</h3>
+        <h3>Genero :{{character.gender}}</h3>
+        <h3>Cabello :{{character.hair}}</h3>
+        <h3>Origen :{{character.origin}}</h3>
+        <h3>Habilidades :{{character.abilities}}</h3>
+        <h3> Alias :{{character.alias}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

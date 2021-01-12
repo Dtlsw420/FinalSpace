@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> {{character.name}}</ion-title>
+  </ion-toolbar>
+</ion-header><br>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>ID PERSONAJE: {{character.id}}</ion-card-subtitle><br><br>
+      <ion-card-title></ion-card-title>
+      <img [src]="character.img_url" style="width: 100%;" />
+    </ion-card-header>
+  
+    <ion-card-content>
+      <h2>Personaje Id :{{character.id}}</h2>
+      <h3>Nombre :{{character.name}}</h3>
+      <h3>Estatus :{{character.status}}</h3>
+      <h3>Especie :{{character.species}}</h3>
+      <h3>Genero :{{character.gender}}</h3>
+      <h3>Cabello :{{character.hair}}</h3>
+      <h3> Alias :{{character.alias}}</h3>
+    </ion-card-content>
+    <ion-card-content>Origen :{{character.origin}}</ion-card-content>
+    <ion-card-content>Habilidades :{{character.abilities}}</ion-card-content>
+  </ion-card>
+
+</ion-content>

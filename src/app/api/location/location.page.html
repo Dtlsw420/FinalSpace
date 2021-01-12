@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{location.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Locacion Id :{{location.id}}</ion-card-title><br>
+      <img [src]="location.img_url" ><br>
+      <ion-card-subtitle>Tipo:{{location.type}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>Habitantes:{{location.inhabitants}}</ion-card-content>
+  
+  </ion-card>
+  <ion-card>
+
+
+    <h3 class="ion-margin">Residentes Encontrados</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let location of location.notable_residents">
+          <ion-card  (click)="gotTocharacter(location.id)">
+            
+            <ion-card-header>
+              <img [src]="location.img_url" > 
+                <h3>{{location.id}} </h3>
+              <ion-card-subtitle>{{location.name}} </ion-card-subtitle>
+          
+
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
